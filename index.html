@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume — Samarth Dhol</title>
+
+  <!-- Redirect to the PDF hosted at the site root -->
+  <meta http-equiv="refresh" content="0; url=./Resume.pdf" />
+</head>
+<body style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; margin: 2rem;">
+  <p>Opening resume… If you are not redirected automatically,
+    <a id="reslink" href="./Resume.pdf">click here to open the PDF</a>.
+  </p>
+  <object data="./Resume.pdf" type="application/pdf" width="100%" height="90vh">
+    <p>Preview not available. <a href="./Resume.pdf">Download the resume</a>.</p>
+  </object>
+  <script>
+    (function(){
+      const pdfPath = './Resume.pdf';
+      try { location.replace(pdfPath); } catch(e) {}
+      document.getElementById('reslink').href = pdfPath;
+    })();
+  </script>
+</body>
+</html>
